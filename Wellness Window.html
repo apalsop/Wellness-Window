@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Window Dashboard</title>
+    <style>
+        body {
+            background: #050505;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #instructions {
+            position: fixed;
+            top: 20px;
+            background: rgba(0, 170, 255, 0.9);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+            z-index: 1000;
+            animation: fadeOut 5s forwards;
+            pointer-events: none;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            color: #fff;
+            margin-bottom: 50px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(0, 170, 255, 0.8);
+            animation: pulse-glow 3s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { text-shadow: 0 0 20px rgba(0, 170, 255, 0.6); }
+            to { text-shadow: 0 0 40px rgba(0, 170, 255, 0.9); }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1600px;
+        }
+
+        .window-card {
+            background: #111;
+            border: 2px solid #00aaff;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .window-card:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
+            transform: scale(1.03);
+        }
+
+        .thumb {
+            width: 100%;
+            height: 140px;
+            background-size: cover;
+            border-bottom: 1px solid #00aaff;
+            filter: brightness(0.7);
+        }
+
+        .window-card:hover .thumb { filter: brightness(1.1); }
+
+        .card-content { padding: 15px; text-align: center; }
+        .window-card h2 { margin: 0; font-size: 0.95rem; font-weight: 600; color: #fff; }
+        .window-card span { font-size: 0.65rem; color: #00aaff; display: block; text-transform: uppercase; margin-top: 8px; }
+
+        .footer-tagline {
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 1.4rem;
+            color: #00aaff;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="instructions">Select a Window • F11 for Full Screen</div>
+
+    <h1>WELLNESS WINDOW</h1>
+
+    <div class="grid">
+        <a href="https://www.youtube.com/watch?v=1EiC9bvVGnk" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/1EiC9bvVGnk/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Jackson Hole</h2><span>Live Action</span></div></a>
+        <a href="https://www.youtube.com/watch?v=HpZAez2oYsA" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/HpZAez2oYsA/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Venice: Guglie</h2><span>Hotel Leone</span></div></a>
+        <a href="https://www.youtube.com/watch?v=dFBRpHHwQeg" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/dFBRpHHwQeg/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Venice: St. Marks</h2><span>Tribute to Music</span></div></a>
+        <a href="https://www.youtube.com/watch?v=dfVK7ld38Ys" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/dfVK7ld38Ys/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Shibuya Crossing</h2><span>Tokyo Live</span></div></a>
+        <a href="https://www.youtube.com/watch?v=BWnloy8r0qU" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/BWnloy8r0qU/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Yellowstone</h2><span>Old Faithful</span></div></a>
+        <a href="https://www.youtube.com/watch?v=LhNF-UFpWNY" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/LhNF-UFpWNY/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Aurora Borealis</h2><span>Northern Lights</span></div></a>
+        <a href="https://www.youtube.com/watch?v=fO9e9jnhYK8" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/fO9e9jnhYK8/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Earth & Space ISS</h2><span>NASA Orbit</span></div></a>
+        <a href="https://www.youtube.com/watch?v=ydYDqZQpim8" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/ydYDqZQpim8/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Namibia</h2><span>Wildlife Cam</span></div></a>
+        <a href="https://www.youtube.com/watch?v=aaUERtNMn7o" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/aaUERtNMn7o/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Anacapa Island</h2><span>Channel Islands</span></div></a>
+        <a href="https://www.youtube.com/watch?v=1zcIUk66HX4" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/1zcIUk66HX4/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Underwater Reef</h2><span>Utopia Village</span></div></a>
+        <a href="https://www.youtube.com/watch?v=LC-DK_22eK4" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/LC-DK_22eK4/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Kenya Safari</h2><span>MPALA Wildlife</span></div></a>
+        <a href="https://www.youtube.com/watch?v=oORXfTviuCs" class="window-card" target="_blank"><div class="thumb" style="background-image: url('https://img.youtube.com/vi/oORXfTviuCs/hqdefault.jpg'); background-position: center;"></div><div class="card-content"><h2>Kenya Waterhole</h2><span>MPALA Live Feed</span></div></a>
+
+        <a href="https://www.window-swap.com/window" class="window-card" target="_blank">
+            <div class="thumb" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=400'); background-position: center;"></div>
+            <div class="card-content"><h2>Random Window</h2><span>Global Community</span></div>
+        </a>
+
+        <a href="https://driveandlisten.app/" class="window-card" target="_blank">
+            <div class="thumb" style="background-image: url('https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=400'); background-position: center;"></div>
+            <div class="card-content"><h2>City Drive & Radio</h2><span>Street Journey</span></div>
+        </a>
+
+        <a href="https://virtualvacation.us/walk" class="window-card" target="_blank">
+            <div class="thumb" style="background-image: url('https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400'); background-position: center;"></div>
+            <div class="card-content"><h2>Walking Tour</h2><span>100+ Locations</span></div>
+        </a>
+
+        <a href="https://virtualvacation.us/fly" class="window-card" target="_blank">
+            <div class="thumb" style="background-image: url('https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=400'); background-position: center 25%; background-size: 160%;"></div>
+            <div class="card-content"><h2>Airplane Flyover</h2><span>Aerial View</span></div>
+        </a>
+    </div>
+
+    <div class="footer-tagline">Another product brought to you by Adam</div>
+
+</body>
+</html>
